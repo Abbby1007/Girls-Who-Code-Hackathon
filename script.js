@@ -1,5 +1,6 @@
 document.getElementById("secondQ").style.visibility = 'hidden';
 document.getElementById("thirdQ").style.visibility = 'hidden';
+// document.getElementById("Questions").style.visibility = 'hidden';
 var valueOne = 0;
 var valueTwo = 0;
 var valueThree = 0;
@@ -58,7 +59,7 @@ function first(){
 
 function firstCorrect(){
     total += 1;
-  document.getElementById("results").textContent = `Correct`;  
+  document.getElementById("results").innerHTML = `<h3 id="correct"> Correct </h3>`;  
    document.getElementById("Buttons").innerHTML = ` `
    document.getElementById("secondQ").style.visibility = 'visible';
 }
@@ -67,22 +68,22 @@ function firstWrong(){
     document.getElementById("Buttons").innerHTML = ``
      document.getElementById("secondQ").style.visibility = 'visible';
      if(valueOne == 0){
-    document.getElementById("results").textContent = `Wrong the correct answer was 1.Poverty`;  
+    document.getElementById("results").innerHTML = `<h3 id="wrong"> Wrong the correct answer was 1. Poverty</h3>`;  
      }
      if(valueOne == 1){
-    document.getElementById("results").textContent = `Wrong the correct answer was 8.Decent Work and economic growth`;
+    document.getElementById("results").innerHTML = `<h3 id="wrong"> Wrong the correct answer was 8. Decent Work and economic growth </h3>`;
      }
     if(valueOne == 2){
-    document.getElementById("results").textContent = `Wrong the correct answer was 3.Good Health and Well-Being`;
+    document.getElementById("results").innerHTML = `<h3 id="wrong"> Wrong the correct answer was 3. Good Health and Well-Being </h3>`;
     }
         if(valueOne == 3){
-    document.getElementById("results").textContent = `Wrong the correct answer was 14.Life Below Water`;
+    document.getElementById("results").innerHTML = `<h3 id="wrong"> Wrong the correct answer was 14. Life Below Water </h3>`;
     }
         if(valueOne == 4){
-    document.getElementById("results").textContent = `Wrong the correct answer was 6.Clean water and sanitation`;
+    document.getElementById("results").innerHTML = ` <h3 id="wrong"> Wrong the correct answer was 6. Clean water and sanitation </h3>`;
     }
         if(valueOne == 5){
-    document.getElementById("results").textContent = `Wrong the correct answer was 16.Peace, Justice, and Strong Institution`;
+    document.getElementById("results").innerHTML = `<h3 id="wrong"> Wrong the correct answer was 16. Peace, Justice, and Strong Institution </h3>`;
     }
 
      
@@ -140,7 +141,7 @@ const ChoiceD = ["3. Good Health and Well-Being", "7. Affortable and Clean Energ
 
 function secondCorrect(){
     total += 1;
-  document.getElementById("results").textContent = `Correct`;  
+  document.getElementById("results").innerHTML = `<h3 id="correct"> Correct </h3>`;  
    document.getElementById("Buttons").innerHTML = ` `
    document.getElementById("thirdQ").style.visibility = 'visible';
 }
@@ -150,22 +151,22 @@ function secondWrong(){
    document.getElementById("thirdQ").style.visibility = 'visible';
 
    if(valueTwo == 0){
-    document.getElementById("results").textContent = `Wrong the correct answer was 11.Sustainable Cities and Communities`;  
+    document.getElementById("results").innerHTML = ` <h3 id="wrong"> Wrong the correct answer was 11. Sustainable Cities and Communities`;  
      }
      if(valueTwo == 1){
-    document.getElementById("results").textContent = `Wrong the correct answer was 2.Zero Hunger`;
+    document.getElementById("results").innerHTML = ` <h3 id="wrong"> Wrong the correct answer was 2. Zero Hunger`;
      }
     if(valueTwo == 2){
-    document.getElementById("results").textContent = `Wrong the correct answer was 9.Industry, Innovation and Infrastructure`;
+    document.getElementById("results").innerHTML = ` <h3 id="wrong"> Wrong the correct answer was 9. Industry, Innovation and Infrastructure`;
     }
         if(valueTwo == 3){
-    document.getElementById("results").textContent = `Wrong the correct answer was 15.Life on Land`;
+    document.getElementById("results").innerHTML = ` <h3 id="wrong"> Wrong the correct answer was 15. Life on Land`;
     }
         if(valueTwo == 4){
-    document.getElementById("results").textContent = `Wrong the correct answer was 13.Climate Action`;
+    document.getElementById("results").innerHTML = ` <h3 id="wrong"> Wrong the correct answer was 13. Climate Action`;
     }
         if(valueTwo == 5){
-    document.getElementById("results").textContent = `Wrong the correct answer was 17.Partnerships For The Goals`;
+    document.getElementById("results").innerHTML = ` <h3 id="wrong"> Wrong the correct answer was 17. Partnerships For The Goals`;
     }
 }
 
@@ -222,8 +223,8 @@ if(valueThree == 0){
 function thirdCorrect(){
     total += 1;
 
-    document.getElementById("results").textContent = `Correct`
-    document.getElementById("total").textContent = `You got ${total} out of 3 Questions right. You can try Again to learn more about UN SDG Goals`;
+    document.getElementById("results").innerHTML = ` <h3 id="correct> Correct </h3>`
+    document.getElementById("total").innerHTML = `<h3> You got ${total} out of 3 Questions right. You can try again to learn more about UN SDG Goals </h3> <br> <a href="QuestionOne.html"> <button id="tryAgain">Try Again</button> </a>`;
     document.getElementById("Buttons").innerHTML = ` `
    document.getElementById("thirdQ").style.visibility = 'hidden';
 
@@ -233,27 +234,27 @@ function thirdWrong(){
         document.getElementById("Buttons").innerHTML = ` `
    document.getElementById("thirdQ").style.visibility = 'hidden';
 if(valueThree == 0){
-    document.getElementById("results").textContent = `Wrong the correct answer was 4.Quality Education`; 
-    document.getElementById("total").textContent = `You got ${total} out of 3 Questions right. You can try Again to learn more about UN SDG Goals`; 
+    document.getElementById("results").innerHTML = ` <h3 id="wrong"> Wrong the correct answer was 4. Quality Education</h3>`; 
+    document.getElementById("total").innerHTML = `<h3> You got ${total} out of 3 Questions right. You can try again to learn more about UN SDG Goals </h3> <br> <a href="QuestionOne.html"> <button id="tryAgain">Try Again</button> </a>`;
      }
      if(valueThree == 1){
-    document.getElementById("results").textContent = `Wrong the correct answer was 5.Gender Equality`;
-    document.getElementById("total").textContent = `You got ${total} out of 3 Questions right. You can try Again to learn more about UN SDG Goals`;
+    document.getElementById("results").innerHTML = ` <h3 id="wrong"> Wrong the correct answer was 5. Gender Equality</h3>`;
+document.getElementById("total").innerHTML = `<h3> You got ${total} out of 3 Questions right. You can try again to learn more about UN SDG Goals </h3> <br> <a href="QuestionOne.html"> <button id="tryAgain">Try Again</button> </a>`;
      }
     if(valueThree == 2){
-    document.getElementById("results").textContent = `Wrong the correct answer was 7.Affordable and Clean Energy`;
-    document.getElementById("total").textContent = `You got ${total} out of 3 Questions right. You can try Again to learn more about UN SDG Goals`;
+    document.getElementById("results").innerHTML = ` <h3 id="wrong"> Wrong the correct answer was 7. Affordable and Clean Energy</h3>`;
+document.getElementById("total").innerHTML = `<h3> You got ${total} out of 3 Questions right. You can try again to learn more about UN SDG Goals </h3> <br> <a href="QuestionOne.html"> <button id="tryAgain">Try Again</button> </a>`;
     }
         if(valueThree == 3){
-    document.getElementById("results").textContent = `Wrong the correct answer was 10.Reduced Inequalities `;
-    document.getElementById("total").textContent = `You got ${total} out of 3 Questions right. You can try Again to learn more about UN SDG Goals`;
+    document.getElementById("results").innerHTML = ` <h3 id="wrong"> Wrong the correct answer was 10. Reduced Inequalities</h3> `;
+document.getElementById("total").innerHTML = `<h3> You got ${total} out of 3 Questions right. You can try again to learn more about UN SDG Goals </h3> <br> <a href="QuestionOne.html"> <button id="tryAgain">Try Again</button> </a>`;
     }
         if(valueThree == 4){
-    document.getElementById("results").textContent = `Wrong the correct answer was 12.Responsible Consumption and Production `;
-    document.getElementById("total").textContent = `You got ${total} out of 3 Questions right. You can try Again to learn more about UN SDG Goals`;
+    document.getElementById("results").innerHTML = ` <h3 id="wrong"> Wrong the correct answer was 12. Responsible Consumption and Production </h3>`;
+document.getElementById("total").innerHTML = `<h3> You got ${total} out of 3 Questions right. You can try again to learn more about UN SDG Goals </h3> <br> <a href="QuestionOne.html"> <button id="tryAgain" >Try Again</button> </a>`;
     }
         if(valueThree == 5){
-    document.getElementById("results").textContent = `Wrong the correct answer was 6. Clean Water and Sanitation`;
-    document.getElementById("total").textContent = `You got ${total} out of 3 Questions right. You can try Again to learn more about UN SDG Goals`;
+    document.getElementById("results").innerHTML = ` <h3 id="wrong"> Wrong the correct answer was 6. Clean Water and Sanitation</h3>`;
+ document.getElementById("total").innerHTML = `<h3> You got ${total} out of 3 Questions right. You can try again to learn more about UN SDG Goals </h3> <br> <a href="QuestionOne.html"> <button id="tryAgain" >Try Again</button> </a>`;
     }
 }

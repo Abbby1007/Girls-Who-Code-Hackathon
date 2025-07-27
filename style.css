@@ -20,6 +20,44 @@ div{
      padding: 1px;
 }
 
+#Instructions{
+     font-size: 2rem; 
+     text-align: center;;
+}
+
+#correct{
+    color:green;
+}
+#wrong{
+    color:red;
+}
+#total{
+    font-size:2rem;
+    color: 	#FDDD5C;
+}
+
+#tryAgain{
+    background-color: #FF6663;
+    color:black;
+    font-weight: bold;
+}
+
+#tryAgain:hover{
+    background-color: 	#fdaaaa;
+    color:black;
+    font-weight: bold;
+}
+
+#results{
+font-size: 2rem;
+font-weight: bold;
+}
+
+#round{
+font-size: 2rem ;
+text-align: center;
+font-weight: bold ;
+}
 button{
 border-radius: 8px;
 width: fit-content;
@@ -31,6 +69,11 @@ color:white;
 margin: 0px, 0px, 20px, 0px;
 display: block;
 margin: auto;
+}
+
+button:hover {
+    background-color: black;
+    color: Grey;
 }
 
 a {
