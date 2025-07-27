@@ -1,5 +1,7 @@
 document.getElementById("secondQ").style.visibility = 'hidden';
+document.getElementById("thirdQ").style.visibility = 'hidden';
 
+// FIRST QUESTION PARTS START --------------------------------------
 function first(){
     document.getElementById("startBtn").style.visibility = 'hidden';
     const Questions = ["By 2030, ensure that all men and women, in particular the poor and the vulnerable, have equal rights to economic resources, as well as access to basic services, ownership and control over land and other forms of property, inheritance, natural resources, appropriate new technology and financial services, including microfinance", 
@@ -57,11 +59,13 @@ function firstWrong(){
      document.getElementById("secondQ").style.visibility = 'visible';
 }
 
+// FIRST QUESTION PARTS END --------------------------------------
+
 function second(){
-document.getElementById("Question").textContent = `test`;
+document.getElementById("results").textContent = ` `; 
 document.getElementById("secondQ").style.visibility = 'hidden';
 
-const Question = ["", 
+const Questions = ["", 
     "",
     "",
     "",
@@ -70,15 +74,52 @@ const Question = ["",
 ]
 
 const choiceA = ["", "", "", "", "", ""];
-const choiceB = ["", "", "", "", "", ""];
-const choiceC = ["", "", "", "", "", ""];
-const choiceD = ["", "", "", "", "", ""];
+const ChoiceB = ["", "", "", "", "", ""];
+const ChoiceC = ["", "", "", "", "", ""];
+const ChoiceD = ["", "", "", "", "", ""];
 
    const value = Math.floor(Math.random() * 6);
 
+   if(value == 0){
+    document.getElementById("Question").textContent = `${Questions[value]}`;
+    document.getElementById("Buttons").innerHTML = `<button onclick="secondWrong()">${choiceA[value]} </button><br> <button onclick="secondWrong()">${ChoiceB[value]}</button><br> <button onclick="secondCorrect()">${ChoiceC[value]}</button><br> <button onclick="secondWrong()">${ChoiceD[value]}</button>`;
+   }
+      if(value == 1){
+    document.getElementById("Question").textContent = `${Questions[value]}`;
+    document.getElementById("Buttons").innerHTML = `<button onclick="secondCorrect()">${choiceA[value]} </button><br> <button onclick="secondWrong()">${ChoiceB[value]}</button><br> <button onclick="secondWrong()">${ChoiceC[value]}</button><br> <button onclick="secondWrong()">${ChoiceD[value]}</button>`;
+   }
+      if(value == 2){
+    document.getElementById("Question").textContent = `${Questions[value]}`;
+    document.getElementById("Buttons").innerHTML = `<button onclick="secondCorrect()">${choiceA[value]} </button><br> <button onclick="secondWrong()">${ChoiceB[value]}</button><br> <button onclick="secondWrong()">${ChoiceC[value]}</button><br> <button onclick="secondWrong()">${ChoiceD[value]}</button>`;
+   }
+      if(value == 3){
+    document.getElementById("Question").textContent = `${Questions[value]}`;
+    document.getElementById("Buttons").innerHTML = `<button onclick="secondWrong()">${choiceA[value]} </button><br> <button onclick="secondCorrect()">${ChoiceB[value]}</button><br> <button onclick="secondWrong()">${ChoiceC[value]}</button><br> <button onclick="secondWrong()">${ChoiceD[value]}</button>`;
+   }
+      if(value == 4){
+    document.getElementById("Question").textContent = `${Questions[value]}`;
+    document.getElementById("Buttons").innerHTML = `<button onclick="secondCorrect()">${choiceA[value]} </button><br> <button onclick="secondWrong()">${ChoiceB[value]}</button><br> <button onclick="secondWrong()">${ChoiceC[value]}</button><br> <button onclick="secondWrong()">${ChoiceD[value]}</button>`;
+   }
+      if(value == 5){
+    document.getElementById("Question").textContent = `${Questions[value]}`;
+    document.getElementById("Buttons").innerHTML = `<button onclick="secondWrong()">${choiceA[value]} </button><br> <button onclick="secondWrong()">${ChoiceB[value]}</button><br> <button onclick="secondWrong()">${ChoiceC[value]}</button><br> <button onclick="secondCorrect()">${ChoiceD[value]}</button>`;
+   }
+}
+
+function secondCorrect(){
+  document.getElementById("results").textContent = `Correct`;  
+   document.getElementById("Buttons").innerHTML = ` `
+   document.getElementById("thirdQ").style.visibility = 'visible';
+}
+
+function secondWrong(){
+  document.getElementById("results").textContent = `Wrong`;  
+   document.getElementById("Buttons").innerHTML = ` `
+   document.getElementById("thirdQ").style.visibility = 'visible';
 }
 
 
+//-----------------------------
 function third(){
     const Question = ["", 
     "",
