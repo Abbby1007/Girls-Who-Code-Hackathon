@@ -8,7 +8,8 @@
 <body>
     
         <div>
-            <button onclick="first()"> Test </button>
+            <button id="startBtn" onclick="first()"> Start </button>
+            <div id="Instructions"> <h3> Each goal has individual target goals associated with it. </h3> <h3>  Can you name the specific number goal for the certain Goal targets. </h3> </div>
 <div id="Question"> Question </div>
 <div id="Buttons">
 <button> A </button> <br>
@@ -16,10 +17,10 @@
 <button> C </button> <br>
 <button> D </button>
 </div>
-<button id="secondQ"></button>
+
     </div>
     <div id="results"> </div>
-
+<button id="secondQ" onclick="second()"> Next </button>
     <script src="script.js"> </script>
 </body>
 </html>
