@@ -20,15 +20,15 @@ function first(){
 
    if(value == 0){
     document.getElementById("Question").textContent = `${Questions[value]}`;
-    document.getElementById("Buttons").innerHTML = `<button onclick="firstCorrect()">${choiceA[value]} </button><br> <button onclick="firstWrong()">${ChoiceB[value]}</button><br> <button onclick="firstWrong()">${ChoiceC[value]}</button><br> <button onclick="firstWrong()">${ChoiceD[value]}</button>`;
+    document.getElementById("Buttons").innerHTML = `<button onclick="firstCorrect()">${choiceA[value]}</button><br> <button onclick="firstWrong()">${ChoiceB[value]}</button><br> <button onclick="firstWrong()">${ChoiceC[value]}</button><br> <button onclick="firstWrong()">${ChoiceD[value]}</button>`;
    }
       if(value == 1){
     document.getElementById("Question").textContent = `${Questions[value]}`;
-    document.getElementById("Buttons").innerHTML = `<button onclick=firstWrong()">${choiceA[value]} </button><br> <button onclick="firstWrong()">${ChoiceB[value]}</button><br> <button onclick="firstCorrect()">${ChoiceC[value]}</button><br> <button onclick="firstWrong()">${ChoiceD[value]}</button>`;
+    document.getElementById("Buttons").innerHTML = `<button onclick="firstWrong()">${choiceA[value]}</button><br> <button onclick="firstWrong()">${ChoiceB[value]}</button><br> <button onclick="firstCorrect()">${ChoiceC[value]}</button><br> <button onclick="firstWrong()">${ChoiceD[value]}</button>`;
    }
       if(value == 2){
     document.getElementById("Question").textContent = `${Questions[value]}`;
-    document.getElementById("Buttons").innerHTML = `<button onclick="firstWrong()">${choiceA[value]} </button><br> <button onclick="firstWrong()">${ChoiceB[value]}</button><br> <button onclick="firstCorrect()">${ChoiceC[value]}</button><br> <button onclick="firstCorrect()">${ChoiceD[value]}</button>`;
+    document.getElementById("Buttons").innerHTML = `<button onclick="firstWrong()">${choiceA[value]}</button><br> <button onclick="firstWrong()">${ChoiceB[value]}</button><br> <button onclick="firstCorrect()">${ChoiceC[value]}</button><br> <button onclick="firstCorrect()">${ChoiceD[value]}</button>`;
    }
       if(value == 3){
     document.getElementById("Question").textContent = `${Questions[value]}`;
@@ -36,11 +36,11 @@ function first(){
    }
       if(value == 4){
     document.getElementById("Question").textContent = `${Questions[value]}`;
-    document.getElementById("Buttons").innerHTML = `<button onclick="firstCorrect()">${choiceA[value]} </button><br> <button onclick="firstWrong()">${ChoiceB[value]}</button><br> <button onclick="firstWrong()">${ChoiceC[value]}</button><br> <button onclick="firstWrong()">${ChoiceD[value]}</button>`;
+    document.getElementById("Buttons").innerHTML = `<button onclick="firstCorrect()">${choiceA[value]}</button><br> <button onclick="firstWrong()">${ChoiceB[value]}</button><br> <button onclick="firstWrong()">${ChoiceC[value]}</button><br> <button onclick="firstWrong()">${ChoiceD[value]}</button>`;
    }
       if(value == 5){
     document.getElementById("Question").textContent = `${Questions[value]}`;
-    document.getElementById("Buttons").innerHTML = `<button onclick="firstWrong()">${choiceA[value]} </button><br> <button onclick="firstCorrect()">${ChoiceB[value]}</button><br> <button onclick="firstWrong()">${ChoiceC[value]}</button><br> <button onclick="firstWrong()">${ChoiceD[value]}</button>`;
+    document.getElementById("Buttons").innerHTML = `<button onclick="firstWrong()">${choiceA[value]}</button><br> <button onclick="firstCorrect()">${ChoiceB[value]}</button><br> <button onclick="firstWrong()">${ChoiceC[value]}</button><br> <button onclick="firstWrong()">${ChoiceD[value]}</button>`;
    }
 
     
@@ -65,18 +65,18 @@ function second(){
 document.getElementById("results").textContent = ` `; 
 document.getElementById("secondQ").style.visibility = 'hidden';
 
-const Questions = ["", 
-    "",
-    "",
-    "",
-    "",
-    "",
+const Questions = ["By 2030, provide access to safe, affordable, accessible and sustainable transport systems for all, improving road safety, notably by expanding public transport, with special attention to the needs of those in vulnerable situations, women, children, persons with disabilities and older persons", 
+    "By 2030, ensure sustainable food production systems and implement resilient agricultural practices that increase productivity and production, that help maintain ecosystems, that strengthen capacity for adaptation to climate change, extreme weather, drought, flooding and other disasters and that progressively improve land and soil quality",
+    "Significantly increase access to information and communications technology and strive to provide universal and affordable access to the Internet in least developed countries by 2020",
+    "Take urgent and significant action to reduce the degradation of natural habitats, halt the loss of biodiversity and, by 2020, protect and prevent the extinction of threatened species",
+    "Improve education, awareness-raising and human and institutional capacity on climate change mitigation, adaptation, impact reduction and early warning",
+    "Assist developing countries in attaining long-term debt sustainability through coordinated policies aimed at fostering debt financing, debt relief and debt restructuring, as appropriate, and address the external debt of highly indebted poor countries to reduce debt distress",
 ]
 
-const choiceA = ["", "", "", "", "", ""];
-const ChoiceB = ["", "", "", "", "", ""];
-const ChoiceC = ["", "", "", "", "", ""];
-const ChoiceD = ["", "", "", "", "", ""];
+const choiceA = ["10. Reduced Inequalities", "2. Zero Hunger", "9. Industry, Innovation and Infrastructure", "7. Affortable and Clean Energy", "13. Climate Action", "16. Peace, Justice and Strong Institutions"];
+const ChoiceB = ["12. Responsible Consumption and Production", "1. Poverty", "17. Partnerships For The Goals", "15. Life on Land", "15. Life On Land", "8. Decent Work and Economic Growth"];
+const ChoiceC = ["11. Sustainable cities and communities", "3. Good Health and Well-Being", "16. Peace, Justice and Strong Institutions", "12. Responsible Consumption and Production", "11. Sustainable Cities and Communities", "10. Reduced Inequalities"];
+const ChoiceD = ["3. Good Health and Well-Being", "7. Affortable and Clean Energy", "12. Responsible Consumption and Production", "11. Sustainable Cities and Communities", "1. No Poverty", "17. Partnerships For The Goals"];
 
    const value = Math.floor(Math.random() * 6);
 
