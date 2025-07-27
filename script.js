@@ -20,30 +20,30 @@ function first(){
     const ChoiceB = ["2. Zero Hunger", "5. Gender Equality ","8. Decent work and economic growth","13. Climate Action","15. Life On Land","16. Peace, Justice, and Strong Institutions"];
     const ChoiceC = ["10. Reduced Inequalities", "8. Decent work and economic growth","6. Clean Water and Sanitation","11. Sustainable Cities and Communities","11. Sustainable Cities and Communities","9. Industry, Innovation and Infrastructure"];
     const ChoiceD= ["12. Responsible Consumption and Production", "10. Reduced Inequalities","3. Good Health and Well-Being","14. Life Below Water","14. Life Below Water","17. Partnerships For The Goals"];
-   valueOne = Math.floor(Math.random() * 6);
+   
+    valueOne = Math.floor(Math.random() * 6);
 
-
-   if( valueOne == 0){
+   if(valueOne == 0){
     document.getElementById("Question").textContent = `${Questions[valueOne]}`;
     document.getElementById("Buttons").innerHTML = `<button onclick="firstCorrect()">${choiceA[valueOne]}</button><br> <button onclick="firstWrong()">${ChoiceB[valueOne]}</button><br> <button onclick="firstWrong()">${ChoiceC[valueOne]}</button><br> <button onclick="firstWrong()">${ChoiceD[valueOne]}</button>`;
    }
-      if( valueOne == 1){
+      if(valueOne == 1){
     document.getElementById("Question").textContent = `${Questions[valueOne]}`;
     document.getElementById("Buttons").innerHTML = `<button onclick="firstWrong()">${choiceA[valueOne]}</button><br> <button onclick="firstWrong()">${ChoiceB[valueOne]}</button><br> <button onclick="firstCorrect()">${ChoiceC[valueOne]}</button><br> <button onclick="firstWrong()">${ChoiceD[valueOne]}</button>`;
    }
-      if( valueOne == 2){
+      if(valueOne == 2){
     document.getElementById("Question").textContent = `${Questions[valueOne]}`;
     document.getElementById("Buttons").innerHTML = `<button onclick="firstWrong()">${choiceA[valueOne]}</button><br> <button onclick="firstWrong()">${ChoiceB[valueOne]}</button><br> <button onclick="firstCorrect()">${ChoiceC[valueOne]}</button><br> <button onclick="firstCorrect()">${ChoiceD[valueOne]}</button>`;
    }
-      if( valueOne == 3){
+      if(valueOne == 3){
     document.getElementById("Question").textContent = `${Questions[valueOne]}`;
     document.getElementById("Buttons").innerHTML = `<button onclick="firstWrong()">${choiceA[valueOne]} </button><br> <button onclick="firstWrong()">${ChoiceB[valueOne]}</button><br> <button onclick="firstWrong()">${ChoiceC[valueOne]}</button><br> <button onclick="firstCorrect()">${ChoiceD[valueOne]}</button>`;
    }
-      if( valueOne == 4){
-    document.getElementById("Question").textContent = `${Questions[valueOne]}`;
-    document.getElementById("Buttons").innerHTML = `<button onclick="firstCorrect()">${choiceA[valueOne]}</button><br> <button onclick="firstWrong()">${ChoiceB[valueOne]}</button><br> <button onclick="firstWrong()">${ChoiceC[valueOne]}</button><br> <button onclick="firstWrong()">${ChoiceD[vvalueOne]}</button>`;
+      if(valueOne == 4){
+  document.getElementById("Question").textContent = `${Questions[valueOne]}`;
+    document.getElementById("Buttons").innerHTML = `<button onclick="firstCorrect()">${choiceA[valueOne]} </button><br> <button onclick="firstWrong()">${ChoiceB[valueOne]}</button><br> <button onclick="firstWrong()">${ChoiceC[valueOne]}</button><br> <button onclick="firstCorrect()">${ChoiceD[valueOne]}</button>`;
    }
-      if( valueOne == 5){
+      if(valueOne == 5){
     document.getElementById("Question").textContent = `${Questions[valueOne]}`;
     document.getElementById("Buttons").innerHTML = `<button onclick="firstWrong()">${choiceA[valueOne]}</button><br> <button onclick="firstCorrect()">${ChoiceB[valueOne]}</button><br> <button onclick="firstWrong()">${ChoiceC[valueOne]}</button><br> <button onclick="firstWrong()">${ChoiceD[valueOne]}</button>`;
    }
@@ -85,6 +85,7 @@ function firstWrong(){
 
 // FIRST QUESTION PARTS END --------------------------------------
 
+// Second QUESTION PARTS START --------------------------------------
 function second(){
 document.getElementById("results").textContent = ` `; 
 document.getElementById("secondQ").style.visibility = 'hidden';
@@ -162,7 +163,7 @@ function secondWrong(){
 }
 
 
-//-----------------------------
+// Second QUESTION PARTS END --------------------------------------
 function third(){
     const Question = ["", 
     "",
@@ -171,6 +172,8 @@ function third(){
     "",
     "",
 ]
+
+valueThree = Math.floor(Math.random() * 6);
 
 const choiceA = ["", "", "", "", "", ""];
 const choiceB = ["", "", "", "", "", ""];
