@@ -5,9 +5,13 @@ var valueTwo = 0;
 var valueThree = 0;
 var valueFour = 0;
 var valueFive = 0;
+var round = 0;
+var total = 0;
 
 // FIRST QUESTION PARTS START --------------------------------------
 function first(){
+    round += 1;
+    document.getElementById("round").textContent= `Round ${round}/3`;
     document.getElementById("startBtn").style.visibility = 'hidden';
     const Questions = ["By 2030, ensure that all men and women, in particular the poor and the vulnerable, have equal rights to economic resources, as well as access to basic services, ownership and control over land and other forms of property, inheritance, natural resources, appropriate new technology and financial services, including microfinance", 
         "Protect labour rights and promote safe and secure working environments for all workers, including migrant workers, in particular women migrants, and those in precarious employment",
@@ -53,6 +57,7 @@ function first(){
 }
 
 function firstCorrect(){
+    total += 1;
   document.getElementById("results").textContent = `Correct`;  
    document.getElementById("Buttons").innerHTML = ` `
    document.getElementById("secondQ").style.visibility = 'visible';
@@ -87,6 +92,8 @@ function firstWrong(){
 
 // Second QUESTION PARTS START --------------------------------------
 function second(){
+    round += 1;
+    document.getElementById("round").textContent= `Round ${round}/3`;
 document.getElementById("results").textContent = ` `; 
 document.getElementById("secondQ").style.visibility = 'hidden';
 
@@ -132,13 +139,13 @@ const ChoiceD = ["3. Good Health and Well-Being", "7. Affortable and Clean Energ
 }
 
 function secondCorrect(){
+    total += 1;
   document.getElementById("results").textContent = `Correct`;  
    document.getElementById("Buttons").innerHTML = ` `
    document.getElementById("thirdQ").style.visibility = 'visible';
 }
 
 function secondWrong(){
-  document.getElementById("results").textContent = `Wrong`;  
    document.getElementById("Buttons").innerHTML = ` `
    document.getElementById("thirdQ").style.visibility = 'visible';
 
@@ -165,18 +172,88 @@ function secondWrong(){
 
 // Second QUESTION PARTS END --------------------------------------
 function third(){
-    const Question = ["", 
-    "",
-    "",
-    "",
-    "",
-    "",
+document.getElementById("results").textContent = ` `; 
+document.getElementById("thirdQ").style.visibility = 'hidden';
+    round += 1;
+    document.getElementById("round").textContent= `Round ${round}/3`;
+
+    const Questions = ["By 2030, substantially increase the number of youth and adults who have relevant skills, including technical and vocational skills, for employment, decent jobs and entrepreneurship", 
+    "Recognize and value unpaid care and domestic work through the provision of public services, infrastructure and social protection policies and the promotion of shared responsibility within the household and the family as nationally appropriate",
+    "By 2030, enhance international cooperation to facilitate access to clean energy research and technology, including renewable energy, energy efficiency and advanced and cleaner fossil-fuel technology, and promote investment in energy infrastructure and clean energy technology",
+    "Ensure equal opportunity and reduce inequalities of outcome, including by eliminating discriminatory laws, policies and practices and promoting appropriate legislation, policies and action in this regard",
+    "By 2020, achieve the environmentally sound management of chemicals and all wastes throughout their life cycle, in accordance with agreed international frameworks, and significantly reduce their release to air, water and soil in order to minimize their adverse impacts on human health and the environment",
+    "By 2030, implement integrated water resources management at all levels, including through transboundary cooperation as appropriate",
 ]
 
 valueThree = Math.floor(Math.random() * 6);
 
-const choiceA = ["", "", "", "", "", ""];
-const choiceB = ["", "", "", "", "", ""];
-const choiceC = ["", "", "", "", "", ""];
-const choiceD = ["", "", "", "", "", ""];
+const choiceA = ["1. Poverty", "10.Reduced Inequalities", "7.Affordable and Clean Energy", "16. Peace, Justice, and Strong Institutions", "17. Partnerships For The Goals", "13. Climate Action"];
+const ChoiceB = ["8. Decent Work and Economic Growth", "16. Peace, Justice and Strong Institutions", "6.Clean Water and Sanitation", "10. Reduced Inequalities", "12. Responsible Inequalities", "2. Zero Hunger"];
+const ChoiceC = ["10. Reduced Inequalities", "17.Partnerships For The Goals", "9. Industry, Innovation and Infrastructure", "1. Poverty", "3. Good Health and Well-Being", "6. Clean Water and Sanitation"];
+const ChoiceD = ["4. Quality Education", "5. Gender Equality", "11. Sustainable Cities and Communities", "12. Responsible Inequalities", "7. Affortable and Clean Energy", "15. Life On Land"];
+
+if(valueThree == 0){
+    document.getElementById("Question").textContent = `${Questions[valueThree]}`;
+    document.getElementById("Buttons").innerHTML = `<button onclick="thirdWrong()">${choiceA[valueThree]} </button><br> <button onclick="thirdWrong()">${ChoiceB[valueThree]}</button><br> <button onclick="thirdWrong()">${ChoiceC[valueThree]}</button><br> <button onclick="thirdCorrect()">${ChoiceD[valueThree]}</button>`;
+   }
+      if(valueThree == 1){
+    document.getElementById("Question").textContent = `${Questions[valueThree]}`;
+    document.getElementById("Buttons").innerHTML = `<button onclick="thirdWrong()">${choiceA[valueThree]} </button><br> <button onclick="thirdWrong()">${ChoiceB[valueThree]}</button><br> <button onclick="thirdWrong()">${ChoiceC[valueThree]}</button><br> <button onclick="thirdCorrect()">${ChoiceD[valueThree]}</button>`;
+   }
+      if(valueThree == 2){
+    document.getElementById("Question").textContent = `${Questions[valueThree]}`;
+    document.getElementById("Buttons").innerHTML = `<button onclick="thirdCorrect()">${choiceA[valueThree]} </button><br> <button onclick="thirdWrong()">${ChoiceB[valueThree]}</button><br> <button onclick="thirdWrong()">${ChoiceC[valueThree]}</button><br> <button onclick="thirdWrong()">${ChoiceD[valueThree]}</button>`;
+   }
+      if(valueTwo == 3){
+    document.getElementById("Question").textContent = `${Questions[valueThree]}`;
+    document.getElementById("Buttons").innerHTML = `<button onclick="thirdWrong()">${choiceA[valueThree]} </button><br> <button onclick="thirdCorrect()">${ChoiceB[valueThree]}</button><br> <button onclick="thirdWrong()">${ChoiceC[valueThree]}</button><br> <button onclick="thirdWrong()">${ChoiceD[valueThree]}</button>`;
+   }
+      if(valueThree == 4){
+    document.getElementById("Question").textContent = `${Questions[valueThree]}`;
+    document.getElementById("Buttons").innerHTML = `<button onclick="thirdWrong()">${choiceA[valueThree]} </button><br> <button onclick="thirdCorrect()">${ChoiceB[valueThree]}</button><br> <button onclick="thirdWrong()">${ChoiceC[valueThree]}</button><br> <button onclick="thirdWrong()">${ChoiceD[valueThree]}</button>`;
+   }
+      if(valueThree == 5){
+    document.getElementById("Question").textContent = `${Questions[valueThree]}`;
+    document.getElementById("Buttons").innerHTML = `<button onclick="thirdWrong()">${choiceA[valueThree]} </button><br> <button onclick="thirdWrong()">${ChoiceB[valueThree]}</button><br> <button onclick="thirdCorrect()">${ChoiceC[valueThree]}</button><br> <button onclick="thirdWrong()">${ChoiceD[valueThree]}</button>`;
+   }
+
+}
+
+function thirdCorrect(){
+    total += 1;
+
+    document.getElementById("results").textContent = `Correct`
+    document.getElementById("total").textContent = `You got ${total} out of 3 Questions right. You can try Again to learn more about UN SDG Goals`;
+    document.getElementById("Buttons").innerHTML = ` `
+   document.getElementById("thirdQ").style.visibility = 'hidden';
+
+}
+
+function thirdWrong(){
+        document.getElementById("Buttons").innerHTML = ` `
+   document.getElementById("thirdQ").style.visibility = 'hidden';
+if(valueThree == 0){
+    document.getElementById("results").textContent = `Wrong the correct answer was 4.Quality Education`; 
+    document.getElementById("total").textContent = `You got ${total} out of 3 Questions right. You can try Again to learn more about UN SDG Goals`; 
+     }
+     if(valueThree == 1){
+    document.getElementById("results").textContent = `Wrong the correct answer was 5.Gender Equality`;
+    document.getElementById("total").textContent = `You got ${total} out of 3 Questions right. You can try Again to learn more about UN SDG Goals`;
+     }
+    if(valueThree == 2){
+    document.getElementById("results").textContent = `Wrong the correct answer was 7.Affordable and Clean Energy`;
+    document.getElementById("total").textContent = `You got ${total} out of 3 Questions right. You can try Again to learn more about UN SDG Goals`;
+    }
+        if(valueThree == 3){
+    document.getElementById("results").textContent = `Wrong the correct answer was 10.Reduced Inequalities `;
+    document.getElementById("total").textContent = `You got ${total} out of 3 Questions right. You can try Again to learn more about UN SDG Goals`;
+    }
+        if(valueThree == 4){
+    document.getElementById("results").textContent = `Wrong the correct answer was 12.Responsible Consumption and Production `;
+    document.getElementById("total").textContent = `You got ${total} out of 3 Questions right. You can try Again to learn more about UN SDG Goals`;
+    }
+        if(valueThree == 5){
+    document.getElementById("results").textContent = `Wrong the correct answer was 6. Clean Water and Sanitation`;
+    document.getElementById("total").textContent = `You got ${total} out of 3 Questions right. You can try Again to learn more about UN SDG Goals`;
+    }
 }
