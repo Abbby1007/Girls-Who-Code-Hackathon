@@ -1,0 +1,47 @@
+body{
+     background-color: 	#9EC6F3
+}
+div{
+    margin:0;
+    text-align: center;
+}
+
+#Question{
+    font-size: 3rem;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 8px;
+    border-color: black;
+    border-style: solid;
+    border-width: thin medium;
+    display: block;
+    margin: auto;
+
+     padding: 1px;
+}
+
+button{
+border-radius: 8px;
+width: fit-content;
+height:2rem;
+text-align: center;
+font-size: 1rem;
+background-color: black;
+color:white;
+margin: 0px, 0px, 20px, 0px;
+display: block;
+margin: auto;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+a:hover {
+    outline: none;
+}
+
+a:focus {
+    outline: none;
+}
