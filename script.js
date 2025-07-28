@@ -1,6 +1,7 @@
 document.getElementById("secondQ").style.visibility = 'hidden';
 document.getElementById("thirdQ").style.visibility = 'hidden';
-// document.getElementById("Questions").style.visibility = 'hidden';
+document.getElementById("Question").style.visibility = 'hidden';
+
 var valueOne = 0;
 var valueTwo = 0;
 var valueThree = 0;
@@ -11,6 +12,7 @@ var total = 0;
 
 // FIRST QUESTION PARTS START --------------------------------------
 function first(){
+    document.getElementById("Question").style.visibility = 'visible';
     round += 1;
     document.getElementById("round").textContent= `Round ${round}/3`;
     document.getElementById("startBtn").style.visibility = 'hidden';
@@ -62,9 +64,12 @@ function firstCorrect(){
   document.getElementById("results").innerHTML = `<h3 id="correct"> Correct </h3>`;  
    document.getElementById("Buttons").innerHTML = ` `
    document.getElementById("secondQ").style.visibility = 'visible';
+
+ new Audio("answer-correct.mp3").play();
 }
 
 function firstWrong(){
+    new Audio("incorrect-293358.mp3").play();
     document.getElementById("Buttons").innerHTML = ``
      document.getElementById("secondQ").style.visibility = 'visible';
      if(valueOne == 0){
@@ -93,6 +98,7 @@ function firstWrong(){
 
 // Second QUESTION PARTS START --------------------------------------
 function second(){
+        document.getElementById("Question").style.visibility = 'visible';
     round += 1;
     document.getElementById("round").textContent= `Round ${round}/3`;
 document.getElementById("results").textContent = ` `; 
@@ -140,6 +146,7 @@ const ChoiceD = ["3. Good Health and Well-Being", "7. Affortable and Clean Energ
 }
 
 function secondCorrect(){
+     new Audio("answer-correct.mp3").play();
     total += 1;
   document.getElementById("results").innerHTML = `<h3 id="correct"> Correct </h3>`;  
    document.getElementById("Buttons").innerHTML = ` `
@@ -147,6 +154,7 @@ function secondCorrect(){
 }
 
 function secondWrong(){
+      new Audio("incorrect-293358.mp3").play();
    document.getElementById("Buttons").innerHTML = ` `
    document.getElementById("thirdQ").style.visibility = 'visible';
 
@@ -173,6 +181,7 @@ function secondWrong(){
 
 // Second QUESTION PARTS END --------------------------------------
 function third(){
+        document.getElementById("Question").style.visibility = 'visible';
 document.getElementById("results").textContent = ` `; 
 document.getElementById("thirdQ").style.visibility = 'hidden';
     round += 1;
@@ -221,6 +230,7 @@ if(valueThree == 0){
 }
 
 function thirdCorrect(){
+     new Audio("answer-correct.mp3").play();
     total += 1;
 
     document.getElementById("results").innerHTML = ` <h3 id="correct> Correct </h3>`
@@ -231,6 +241,7 @@ function thirdCorrect(){
 }
 
 function thirdWrong(){
+      new Audio("incorrect-293358.mp3").play();
         document.getElementById("Buttons").innerHTML = ` `
    document.getElementById("thirdQ").style.visibility = 'hidden';
 if(valueThree == 0){

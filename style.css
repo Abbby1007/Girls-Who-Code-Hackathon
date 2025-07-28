@@ -20,6 +20,24 @@ div{
      padding: 1px;
 }
 
+#startBtn{
+background-color: #8eb15c;
+display: block;
+margin: auto;
+width: fit-content;
+height:2rem;
+color:black;
+}
+h2{
+    font-size: 2rem;
+}
+#startBtn:hover {
+background-color: #8eb15c;
+color: grey;
+}
+
+
+
 #Instructions{
      font-size: 2rem; 
      text-align: center;;
