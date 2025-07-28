@@ -124,8 +124,8 @@ const ChoiceD = ["3. Good Health and Well-Being", "7. Affortable and Clean Energ
     document.getElementById("Buttons").innerHTML = `<button onclick="secondWrong()">${choiceA[valueTwo]} </button><br> <button onclick="secondWrong()">${ChoiceB[valueTwo]}</button><br> <button onclick="secondCorrect()">${ChoiceC[valueTwo]}</button><br> <button onclick="secondWrong()">${ChoiceD[valueTwo]}</button>`;
    }
       if(valueTwo == 1){
-    document.getElementById("Question").textContent = `${Questions[valueTwo]}`;
-    document.getElementById("Buttons").innerHTML = `<button onclick="secondCorrect()">${choiceA[valueTwo]} </button><br> <button onclick="secondWrong()">${ChoiceB[valueTwo]}</button><br> <button onclick="secondWrong()">${ChoiceC[valueTwo]}</button><br> <button onclick="secondWrong()">${ChoiceD[valueTwo]}</button>`;
+  document.getElementById("Question").textContent = `${Questions[valueTwo]}`;
+    document.getElementById("Buttons").innerHTML = `<button onclick="secondCorrect()">${choiceA[valueTwo]} </button><br> <button onclick="secondWrong()">${ChoiceB[valueTwo]}</button><br> <button onclick="secondCorrect()">${ChoiceC[valueTwo]}</button><br> <button onclick="secondWrong()">${ChoiceD[valueTwo]}</button>`;
    }
       if(valueTwo == 2){
     document.getElementById("Question").textContent = `${Questions[valueTwo]}`;
